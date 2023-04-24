@@ -1,13 +1,16 @@
 //your JS code here. If required.
-function updateOutput() {
-  const output = document.getElementById('output');
-  const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Hello, world!');
-    }, 1000);
-  });
-
-  promise.then((message) => {
-    output.innerText = message;
-  });
+function a (){
+  const prom = new Promise((resolve,reject)=>{
+     setTimeout(function() {
+       resolve("Hello, world!")
+     }, 1000);
+  })
+  .then((res)=>{
+    const rend = document.getElementById('output');
+	rend.innerHTML = `${res}`
+  })
+	
+  
+ 
 }
+a()
